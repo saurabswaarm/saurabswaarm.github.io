@@ -4,10 +4,11 @@ import {Link as RouterLink, useLocation} from "react-router-dom";
 const Navigation = () => {
    
     return (
-        <HStack pt={10} pb={2} spacing={3} fontSize={"12"} fontWeight={"500"}>
+        <HStack pt={5} pb={2} spacing={3} fontSize={"12"} fontWeight={"500"}>
             <NavItem to={"/"}>profile</NavItem>
             <NavItem to={"/experience"}>experience</NavItem>
             <NavItem to={"/stack"}>stack</NavItem>
+            <Link color={"blackAlpha.600"} href="https://github.com/saurabswaarm">github</Link>
         </HStack>
     )
 }
@@ -16,7 +17,7 @@ const NavItem = ({to, children}) => {
     const {pathname} = useLocation();
     return (
         <Link as={RouterLink} to={to}>
-            <Text color={pathname == to ? "blackAlpha.900" : "blackAlpha.600"} textDecoration={"none"}>
+            <Text color={pathname === to ? "blackAlpha.900" : "blackAlpha.600"} textDecoration={"none"}>
                 {children}
             </Text>
         </Link>

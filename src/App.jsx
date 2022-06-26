@@ -7,7 +7,7 @@ import Profile from "./Profile";
 
 function App() {
   return (
-    <Container maxW="container.sm" py={{ base: "5", md: "24", lg: "40" }}>
+    <Container maxW="container.sm" py={{ base: "0", md: "24", lg: "40" }} my={"0"}>
       <BrowserRouter>
         <Navigation />
         <Routes>
